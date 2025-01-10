@@ -1,0 +1,5 @@
+google-generativeai
+streamlit
+langchain
+PyPDF2
+chromadb
