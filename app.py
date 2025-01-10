@@ -81,7 +81,7 @@ st.markdown(
         }
     </style>
     <div class="footer">
-        <strong>Trademark © 2025 Mohit Raje</strong>
+        <strong>CopyRight © 2025 Mohit Raje</strong>
         <a href="https://github.com/Mohit-Raje" target="_blank">
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
         </a>
