@@ -14,7 +14,25 @@ genai.configure(api_key=API_KEY)
 os.environ['GOOGLE_API_KEY']=API_KEY
 
 model=genai.GenerativeModel("gemini-1.5-flash")
+st.sidebar.write("Don't have an API key? Click the button below")
 
+# Path to the existing text file
+file_path = 'generate_api_key.txt'
+
+try:
+    # Open and read the file content
+    with open(file_path, 'r') as file:
+        file_content = file.read()
+
+    # Add a download button in the sidebar
+    st.sidebar.download_button(
+        label="Download API Key File",
+        data=file_content,  # File content
+        file_name="generate_api_key.txt",  # File name for download
+        mime="text/plain",  # MIME type
+    )
+except FileNotFoundError:
+    st.sidebar.error("The file 'generate_api_key.txt' was not found. Please check the file path.")
 
 def get_gemini_response(prompt , img , input):
     response=model.generate_content([input , img[0] , prompt])
